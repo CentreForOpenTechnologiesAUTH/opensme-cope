@@ -9,4 +9,4 @@ COPE is a tool that can be used for the analysis of software systems. It can pro
 - For publications related to COPE have a look at the publications page.
 - If you want to contribute to COPE's development please consult COPE Developers' starting instructions.
 
-COPE is a NetBeans project and is provided under the terms of the GNU GENERAL PUBLIC LICENSE
+COPE is a NetBeans project and is provided under <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a>
