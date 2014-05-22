@@ -1,0 +1,20 @@
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+</head>
+<body>
+<div class="container">
+	<h2>Component Name: <span>$componentName<span></h2>
+	<h2>Extracted from: <span>$projectName<span></h2>
+	<h2>Execution Scenario: <span>"$executionScenarioName"<span></h2>
+	#if($depend)
+	<h2>Depends on: <span>$executionScenarioDependencies<span></h2>
+	#end
+	<h2>Execution Scenario Description: </h2>
+	<center>
+	<pre><blockquote>$executionScenarioDescription</blockquote></pre>
+	</center>
+<div>
+</body>
+</html>

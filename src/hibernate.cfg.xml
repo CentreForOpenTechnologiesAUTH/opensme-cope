@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dependencies</property>
+    <property name="hibernate.connection.username">copeuser</property>
+    <property name="hibernate.connection.password">opensme</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
+    <property name="hibernate.query.substitutions">true 1, false 0</property>
+    <mapping class="eu.opensme.cope.recommenders.entities.Logentry"/>
+    <mapping class="eu.opensme.cope.recommenders.entities.PackageAnalysis"/>
+    <mapping class="eu.opensme.cope.recommenders.entities.ClassAnalysis"/>
+    <mapping class="eu.opensme.cope.recommenders.entities.Log"/>
+    <mapping class="eu.opensme.cope.recommenders.entities.Path"/>
+    <mapping class="eu.opensme.cope.recommenders.entities.Project"/>
+    <mapping class="eu.opensme.cope.recommenders.entities.Frequencies"/>
+    <mapping class="eu.opensme.cope.recommenders.entities.DependenciesType"/>
+    <mapping class="eu.opensme.cope.recommenders.entities.DependenciesTypeId"/>
+  </session-factory>
+</hibernate-configuration>

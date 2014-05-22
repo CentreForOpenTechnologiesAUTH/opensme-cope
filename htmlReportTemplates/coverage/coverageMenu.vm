@@ -1,0 +1,21 @@
+<html>
+<head>
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div class="container">
+	<div class="menu">
+		<h3>Coverage</h3>
+		#if ( $coveragehtml )  
+			<a href="coverage.html" target="main" id="menu_title">Coverage Report</a><br />
+			<div id="menu_contents">
+			#foreach( $report in $reportslist )		
+				<a href="coverageReports/$report.htmlpath" target="main">$report.name</a><br />
+			#end
+			</div>
+		#end
+	</div>
+</div>
+</body>
+</html>

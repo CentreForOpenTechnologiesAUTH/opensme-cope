@@ -1,0 +1,54 @@
+<html>
+<head>
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+</head>
+<body>
+<div class="container">
+	<h2>Component Name: <span>$componentName<span></h2>
+	<h2>Execution Scenario: <span>"$executionScenarioName"<span></h2>
+	<center>
+	<blockquote>
+		#if($promxml)
+			<p>
+			<h3>PromXML</h3>
+			PromXml is an xml file that represents the Finite State Machine<br />
+			produced by component's execution. This file can be imported to ProM<br />
+			to compute the minimum FSM.<br />
+			<a href="viewXML.html" target="main">View ProM XML File (FSM)</a>
+			</p>
+		#end
+		#if($statemappings)
+			<p>
+			<h3>State Mappings</h3>
+			State Mappings match the states of the FSM, with the respective methods of the component<br />
+			<a href="stateMappings.html" target="main">View State Mappings</a>
+			</p>
+		#end
+		#if($varmappings)
+			<p>
+			<h3>Variable Mappings</h3>			
+			Variable Mappings match the variables of the FSM, with the respective methods of the component<br />
+			<a href="varMappings.html" target="main">View Variable Mappings</a>
+			</p>
+		#end
+		#if($spaghetti)
+			<p>
+			<h3>Fsm Visualization</h3>
+			Fsm Graph is a visual Representation of the PromXml file<br /> 
+			<a href="spaghetti.html" target="main">View FSM Graph</a>
+			</p>
+		#end
+		#if($modelJunit)
+			<p>
+			<h3>ModelJUnit Model</h3>
+			ModelJUnit Model is a java file that modelJUnit uses to produce Functional tests. It is called <br />
+			Executable Finite State Machine (EFSM)<br />
+			<a href="model.html" target="main">View ModelJUnit Model Java File</a>
+			</p>
+		#end
+	</blockquote>
+	</center>
+</div>
+<body>
+</html>

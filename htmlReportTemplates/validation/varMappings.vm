@@ -1,0 +1,30 @@
+<html>
+<head>
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div class="container">
+	<h2>Component Name: <span>$componentName<span></h2>
+	<h2>Execution Scenario: <span>"$executionScenarioName"<span></h2>
+	<h2>XML File: <span>$xmlFilePath</span></h2>
+	<br />
+	<table border="1" width="100%" cellpadding="3" cellspacing="0" summary="">
+		<tr class="bgcolor1">
+			<th align="left" colspan="3">
+			<p><b>Variable Mappings</b></p></th>
+		</tr>
+		<tr class="bgcolor1">
+			<td class="rowname" width="20%"><b>Variable</b></td>
+			<td class="rowname" width="70%"><b>Name</b></td>
+		</tr>
+		#foreach( $variable in $varList )
+			<tr class="bgcolor2 tablecon">
+				<td width="20%"><a>$variable.var</a></td>
+				<td width="70%">$variable.name</td>
+			</tr>
+		#end
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+	<link href="../../style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script language="javascript"> 
+		function drawPercentBar(percent, width, background){
+			if(!width){ width = 200; } 
+			var pixels = width * (percent / 100);
+			var color = 'red';
+			var textcolor = 'black';
+			if (percent >= 50){
+				color = 'green';
+				textcolor = 'white';
+			}else{
+				color = 'red';
+				textcolor = 'black';
+			}
+			if (!background) { background = "none"; }
+
+			document.write("<div style=\"position: relative; line-height: 1em; background-color: " + background + "; border: 1px solid black; width: " + width + "px\">"); 
+			document.write("<div style=\"height: 1.5em; width: " + pixels + "px; background-color: " + color + ";\"></div>"); 
+			document.write("<div style=\"position: absolute; color: " + textcolor + "; text-align: center; padding-top: .25em; width: " + width + "px; top: 0; left: 0\">" + percent + "%</div>"); 
+			document.write("</div>"); 
+		} 
+	</script> 
+</head>
+<body>
+<div class="container">
+	<h2>Component Name: <span>$componentName<span></h2>
+	<h2>Execution Scenario: <span>"$executionScenarioName"<span></h2>
+	<h2>Lcsaj (JJ-Path) Coverage: </h2>
+	<script language="javascript">drawPercentBar($componentLcsaj,600);</script>
+	<h2>Statement Coverage: </h2>
+	<script language="javascript">drawPercentBar($componentStatement,600);</script>
+	<br />
+	<table border="1" width="100%" cellpadding="3" cellspacing="0" summary="">
+		<tr class="bgcolor1">
+			<th align="left" colspan="3">
+			<p><b>Method's Coverage Table</b></p></th>
+		</tr>
+		<tr class="bgcolor1">
+			<td class="rowname" width="80%"><b>Method Signature</b></td>
+			<td class="rowname" width="10%"><b>Lcsaj Coverage (%)</b></td>
+			<td class="rowname" width="10%"><b>Statement Coverage (%)</b></td>
+		</tr>
+		#foreach( $methodSignature in $methodsList )
+			<tr class="bgcolor2 tablecon">
+				#if ( $methodSignature.methodDetails )  
+					<td width="80%"><a href="../methods/$methodSignature.htmlname" target="main">$methodSignature.signature</a></td>
+				#else
+					<td width="80%"><a>$methodSignature.signature</a></td>
+				#end
+				<td width="10%">$methodSignature.lcsaj%</td>
+				<td width="10%">$methodSignature.statement%</td>
+			</tr>
+		#end
+	</table>
+</div>
+</body>
+</html>

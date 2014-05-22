@@ -1,0 +1,12 @@
+<html>
+<head><head>
+<body>
+	#foreach( $uncoveredMethod in $uncoveredList )
+		#if($uncoveredMethod.uncoveredPaths)
+			<p><a href=../uncovered_jjpaths/$uncoveredMethod.htmlName target="code">$uncoveredMethod.pathName</a></p>
+		#else
+			<p><a>$uncoveredMethod.pathName</a></p>
+		#end
+	#end
+</body>
+</html>

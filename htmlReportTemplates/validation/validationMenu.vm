@@ -1,0 +1,35 @@
+<html>
+<head>
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div class="container">
+	<div class="menu">
+		<h3>Validation</h3>
+		#if($includeValidation)
+			<div id="menu_title">
+				<a href="validation.html" target="main">Validation Report</a><br />
+				<div id="menu_contents">
+					#if($promxml)		
+						<a href="viewXML.html" target="main">View ProM XML File (FSM)</a><br />
+					#end
+					#if($statemappings)
+						<a href="stateMappings.html" target="main">View State Mappings</a><br />
+					#end
+					#if($varmappings)
+						<a href="varMappings.html" target="main">View Variable Mappings</a><br />
+					#end
+					#if($spaghetti)
+						<a href="spaghetti.html" target="main">View FSM Graph</a><br />
+					#end
+					#if($modelJunit)
+						<a href="model.html" target="main">View ModelJUnit Model Java File</a><br />
+					#end
+				</div>
+			</div>
+		#end
+	<div>
+</div>
+</body>
+</html>

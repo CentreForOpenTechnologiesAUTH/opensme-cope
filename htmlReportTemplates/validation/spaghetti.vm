@@ -1,0 +1,17 @@
+<html>
+<head>
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div class="container">
+	<h2>Component Name: <span>$componentName<span></h2>
+	<h2>Execution Scenario: <span>"$executionScenarioName"<span></h2>
+	<h2>XML File: <span>$xmlFilePath</span></h2>
+	<br />
+	<div>
+		<img src="fsm.png" alt="fsm"/>
+	</div>
+</div>
+</body>
+</html>

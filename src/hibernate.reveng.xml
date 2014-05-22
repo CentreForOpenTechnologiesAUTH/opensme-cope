@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="dependencies"/>
+  <table-filter match-name="packageinternaldependencies"></table-filter>
+  <table-filter match-name="classinternaldependencies"/>
+  <table-filter match-name="projects"/>
+  <table-filter match-name="logentries"/>
+  <table-filter match-name="packages"/>
+  <table-filter match-name="paths"/>
+  <table-filter match-name="classes"/>
+  <table-filter match-name="logs"/>
+</hibernate-reverse-engineering>

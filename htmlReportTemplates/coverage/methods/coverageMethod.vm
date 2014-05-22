@@ -1,0 +1,56 @@
+<html>
+<head>
+	<link href="../../style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script language="javascript"> 
+		function drawPercentBar(percent, width, background){ 
+			if(!width){ width = 200; }
+			var pixels = width * (percent / 100);
+			var color = 'red';
+			var textcolor = 'black';
+			if (percent >= 50){
+				color = 'green';
+				textcolor = 'white';
+			}else{
+				color = 'red';
+				textcolor = 'black';
+			}
+			if (!background) { background = "none"; }
+
+			document.write("<div style=\"position: relative; line-height: 1em; background-color: " + background + "; border: 1px solid black; width: " + width + "px\">"); 
+			document.write("<div style=\"height: 1.5em; width: " + pixels + "px; background-color: " + color + ";\"></div>"); 
+			document.write("<div style=\"position: absolute; color: " + textcolor + "; text-align: center; padding-top: .25em; width: " + width + "px; top: 0; left: 0\">" + percent + "%</div>"); 
+			document.write("</div>"); 
+		} 
+	</script> 
+</head>
+<body>
+<div class="container">
+	<h2>Component Name: <span>$componentName<span></h2>
+	<h2>Execution Scenario: <span>$executionScenarioName<span></h2>
+	<h2>Method's Signature: <span>$methodSignature<span></h2>
+	<h2>Lcsaj (JJ-Path) Coverage: </h2>
+	<script language="javascript">drawPercentBar($lcsajCoverage,600);</script>
+	<h2>Statement Coverage: </h2>
+	<script language="javascript">drawPercentBar($statementCoverage,600);</script>
+	<br />
+	<h2 id="source_code">Source Code:</h2>
+	<h2 id="jj_paths">Covered Paths:</h2>
+	<iframe class="methodFrame" width="70%" height="550px" FRAMEBORDER = 0 src="../methods_src/$sourceCodeHtmlName" name="code" frameborder=1></iframe>
+	<iframe class="methodFrame" width="29%" height="220px" FRAMEBORDER = 0 src="../methodsCoveredLists/$coveredListHtmlName" name="coveredCode"></iframe>
+	<h2 id="jj_paths">Uncovered Paths:</h2>
+	<iframe class="methodFrame" width="29%" height="220px" FRAMEBORDER = 0 src="../methodsUncoveredLists/$uncoveredListHtmlName" name="UncoveredCode"></iframe>
+	<div style="clear:both;"></div>
+	#if($execCoveredLines)
+		<a href="../methods_exec/$methodsExecHtmlName" target="code"><strong>Show Execution Scenario Covered Lines</strong></a></br>
+		<a href="../methods_src/$sourceCodeHtmlName" target="code"><strong>Don't Show Execution Scenario Covered Lines</strong></a>
+		<div style="clear:both;"></div>
+	#end
+	#if($generatecfg)
+		<h2>Control Flow Graph:</h2>
+		<div style="clear:both;"></div>
+		<a href="../cfgs/$cfgImageFile"><img src="../cfgs/$cfgImageFile" width="250px;" height="auto" alt="image" /></a>
+	#end
+</div>
+</body>
+</html>

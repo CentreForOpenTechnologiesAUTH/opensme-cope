@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Coverage Validation Report</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+</head>
+	<frameset cols="20%,*">
+		<frameset rows="20%,20%,60%">
+			<frame src="mainMenu.html" name="mainmenu" />
+			<frame src="coverage/coverageMenu.html" name="coverage" />
+			<frame src="validation/validationMenu.html" name="validation" />
+		</frameset>
+		<frame src="main.html" name="main" />
+	</frameset>
+</html>

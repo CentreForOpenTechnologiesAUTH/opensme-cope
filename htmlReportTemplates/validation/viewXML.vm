@@ -1,0 +1,21 @@
+<html>
+<head>
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript">
+		file = fopen(getScriptPath("note.xml"), 0);
+		file_length = flength(file);
+		var content = fread(file, file_length);
+		document.form1.textfield.value = content;
+	</script>
+</head>
+<body>
+<div class="container">
+	<h2>Component: <span>$componentName<span></h2>
+	<h2>Execution Scenario: <span>"$executionScenarioName"<span></h2>
+	<h2>XML File: <span>$xmlFilePath</span></h2>
+	<center><div id="xml"><pre>$xmltrace</pre>
+	</div></center>
+</div>
+<body>
+</html>

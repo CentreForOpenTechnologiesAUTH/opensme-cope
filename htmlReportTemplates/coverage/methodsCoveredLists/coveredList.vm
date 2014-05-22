@@ -1,0 +1,12 @@
+<html>
+<head><head>
+<body>
+	#foreach( $coveredMethod in $coveredList )
+		#if($coveredMethod.coveredPaths)
+			<p><a href=../covered_jjpaths/$coveredMethod.htmlName target="code">$coveredMethod.pathName</a></p>
+		#else
+			<p><a>$coveredMethod.pathName</a></p>
+		#end
+	#end
+</body>
+</html>
