@@ -1,5 +1,5 @@
 # Open SME
-## The Component Adaptation Environment (COPE)##
+## The Component Adaptation Environment (COPE)
 
 ### Welcome
 
